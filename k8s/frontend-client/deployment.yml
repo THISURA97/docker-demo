@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: demo-client
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: demo-client
+    spec:
+      containers:
+      - name: frontend-container
+        image: demo-client
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+

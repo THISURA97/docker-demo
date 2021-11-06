@@ -3,6 +3,7 @@ version: '3'
 services:
 #frontend client
   frontend-client:
+    container_name: frontend_container
     image: 'demo-client'
     build:
       context: ./client
@@ -20,6 +21,7 @@ services:
 
 #backend api
   backend-api:
+    container_name : api_container
     image: demo-api
     build:
       context: ./api
@@ -37,6 +39,7 @@ services:
 
 #database
   mongodb:
+    container_name : mongo_container
     image: mongo
     networks:
       - docker-demo
