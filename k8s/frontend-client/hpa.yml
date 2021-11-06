@@ -2,7 +2,7 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   annotations:
-  name: fronted-hpa
+  name: frontend-hpa
   namespace: default
 spec:
   maxReplicas: 4

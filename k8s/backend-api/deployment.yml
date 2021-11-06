@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-deployment
+  name: api-deployment
 spec:
   selector:
     matchLabels:
@@ -13,8 +13,8 @@ spec:
         app: demo-api
     spec:
       containers:
-      - name: backend_container
-        image: demo-api
+      - name: api
+        image: thisura97/demo-repo
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000

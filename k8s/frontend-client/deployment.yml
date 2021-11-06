@@ -13,8 +13,8 @@ spec:
         app: demo-client
     spec:
       containers:
-      - name: frontend-container
-        image: demo-client
+      - name: frontend
+        image: thisura97/demo-repo2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
