@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: api
-        image: thisura97/demo-repo
+        image: thisura97/demo-repo:first
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 3000
+        - containerPort: 5000
 
